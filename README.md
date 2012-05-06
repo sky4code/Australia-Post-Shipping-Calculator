@@ -19,3 +19,6 @@ I am starting with the sctrach and currently I do not have much knowledge in wor
 Any contribution of you will be Appriciated.
 
 Thanks for Reading. Be a part of it.
+
+
+This is a Wordpress plugin in development, to test this please copy auspost folder into "wp-content/plugins" folder and start testing.
