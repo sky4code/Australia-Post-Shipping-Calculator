@@ -56,8 +56,8 @@ class Auspost{
 	function auspost_admin() { 
 		// including admin setting file - Bug#1
 		// Bug#1 - getting error for file permission on calling - Need to resolve
-		//include_once 'auspost_import_admin.php';  
-		include_once "calculate_display.php";
+		include_once 'auspost_import_admin.php';  
+		//include_once "calculate_display.php";
 		
 	}  
 }
