@@ -9,7 +9,7 @@
 class Auspost{
 	
 	function Auspost(){
-		add_action('admin_menu', array( $this, 'init' ), 8);
+		add_action('admin_menu', array( $this, 'init' ));
 	}
 	
 	/**
@@ -32,9 +32,9 @@ class Auspost{
 	function start() {
 		// Set the core file path
 		define( 'AUSPOST_FILE_PATH', dirname( __FILE__ ) );
-
+		
 		// Define the path to the plugin folder
-		define( 'AUSPOST_DIR_NAME',  basename( WPSC_FILE_PATH ) );
+		define( 'AUSPOST_DIR_NAME',  basename( AUSPOST_FILE_PATH ) );
 
 		// Define the URL to the plugin folder
 		define( 'AUSPOST_FOLDER',    dirname( plugin_basename( __FILE__ ) ) );
@@ -46,19 +46,16 @@ class Auspost{
 	
 	function auspost_start(){
 		// starting to add menu item in settings
-		add_action('admin_menu', array( $this, 'auspost_admin_actions' ));
+		add_action('admin_menu', array( $this, 'auspost_admin_actions' ),8);
 	}
 	function auspost_admin_actions() {  
 		// Assigning menu item
-		add_options_page("Australia Post", "Austrlia Post", 1, "Australia Post setting", array( $this, 'auspost_admin' ));  
+		add_options_page('Australia Post', 'Austrlia Post', 'manage_options', 'my-unique-identifier', array( $this, 'auspost_admin' ));
 	}
 	
 	function auspost_admin() { 
 		// including admin setting file - Bug#1
-		// Bug#1 - getting error for file permission on calling - Need to resolve
-		include_once 'auspost_import_admin.php';  
-		//include_once "calculate_display.php";
-		
+		require_once(AUSPOST_FILE_PATH .'/auspost_import_admin.php');  
 	}  
 }
 
