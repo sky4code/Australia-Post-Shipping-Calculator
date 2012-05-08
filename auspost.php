@@ -1,5 +1,5 @@
 <?php
-    /* Plugin Name: Austrlia Post
+  /*Plugin Name: Austrlia Post
     Plugin URI: http://aakashdodiya.com 
     Description: Plugin for Australia post API
     Author: Aakash Dodiya
@@ -13,7 +13,7 @@ class Auspost{
 	}
 	
 	/**
-	 * Takes care of loading up WPEC
+	 * Takes care of loading up Auspost
 	 */
 	function init() {
 		// Previous to initializing
@@ -27,7 +27,7 @@ class Auspost{
 	}
 		
 	/**
-	 * Initialize the basic WPEC constants
+	 * Initialize the basic Auspost constants
 	 */
 	function start() {
 		// Set the core file path
@@ -41,7 +41,7 @@ class Auspost{
 		define( 'AUSPOST_URL',       plugins_url( '', __FILE__ ) );
 		
 		// Finished starting
-		//do_action( 'wpsc_started' );
+		//do_action( 'auspost_started' );
 	}
 	
 	function auspost_start(){
@@ -55,10 +55,10 @@ class Auspost{
 	
 	function auspost_admin() { 
 		// including admin setting file - Bug#1
-		require_once(AUSPOST_FILE_PATH .'/auspost_import_admin.php');  
+		require_once(AUSPOST_FILE_PATH .'/auspost_import_admin.php'); 
 	}  
 }
 
-// Start WPEC
+// Start Auspost
 $auspost = new Auspost();
 ?>
