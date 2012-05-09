@@ -5,9 +5,11 @@
     Author: Aakash Dodiya
     Version: 1.0 
     Author URI: http://aakashdodiya.com 
+	Description: Its the main class of Australia post plugin, everything starts from here.
     */
 class Auspost{
 	
+	/* defining constructure */
 	function Auspost(){
 		add_action('admin_menu', array( $this, 'init' ));
 	}
@@ -39,7 +41,7 @@ class Auspost{
 		// Define the URL to the plugin folder
 		define( 'AUSPOST_FOLDER',    dirname( plugin_basename( __FILE__ ) ) );
 		define( 'AUSPOST_URL',       plugins_url( '', __FILE__ ) );
-		
+		define('AUSPOST_THEME', (AUSPOST_FILE_PATH."/theme"));
 		// Finished starting
 		//do_action( 'auspost_started' );
 	}
@@ -54,7 +56,7 @@ class Auspost{
 	}
 	
 	function auspost_admin() { 
-		// including admin setting file - Bug#1
+		// including admin setting file - Bug#resolved 
 		require_once(AUSPOST_FILE_PATH .'/auspost_import_admin.php'); 
 	}  
 }

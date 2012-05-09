@@ -1,0 +1,22 @@
+body{
+	background-image:url('images/auspost_background.jpg');
+	 font-family: Arial, sans-serif;
+	 
+}
+h1{
+	background: #456789;  opacity:0.8;  font-size:25px; color:#ffffff;
+}
+h2{
+	background: #567890; opacity:0.8;  font-size:22px; color:#ffffff;
+}
+sup{
+	color:red;
+}
+.domesticoptions{
+	 opacity:0.8; width:80%;
+	 background: #e6e6e6;
+	 font-size:20px; line-height: 1.7em;
+}
+.internationaloptions{
+	
+}
